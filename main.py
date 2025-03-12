@@ -29,11 +29,15 @@ task_entry = tk.Entry(frame, font=("Garamond", 16),bg='white',fg='grey')
 task_entry.insert(0, "Enter a task...")
 task_entry.pack(side=tk.LEFT, padx=10)
 
-add_button = tk.Button(window, text="Add Task", font=("Garamond", 14), bg="#4CAF50", fg="#fff")  
+add_button = tk.Button(frame, text="Add Task", font=("Garamond", 14), bg="#4CAF50", fg="#fff")  
 # command=lambda: add_task()
 add_button.pack(side=tk.LEFT,pady=10)
 
+task_list_frame = tk.Frame(window, bg='white')
+task_list_frame.pack(fill=tk.BOTH, expand=True)
+
 task_listbox = tk.Listbox(window, font=("Garamond", 14), bg="#fff", fg="#333", selectmode=tk.SINGLE)
 
-
+canvas = tk.Canvas(task_list_frame, bg='white')
+canvas.pack(side=tk.LEFT,fill=tk.BOTH, expand=True)
 window.mainloop()
